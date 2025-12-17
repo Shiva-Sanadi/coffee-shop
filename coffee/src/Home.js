@@ -1,17 +1,14 @@
 import React from 'react'
-import Navbar from './Navbar';
-import Header from './Header';
-import About from './About';
-import Menu from './Menu';
-import Products from './Products';
-import Review from './Review';
-import Contact from './Contact';
-import Blogs from './Blogs';
-import Footer from './Footer';
+import Header from './components/Header';
+import About from './pages/Aboutus';
+import Menu from './pages/Menu';
+import Products from './pages/Products';
+import Review from './pages/Review';
+import Contact from './pages/ContactUs';
+import Blogs from './pages/Blogs'
 const Home = () => {
   return (
     <>
-        <Navbar/>
         <Header/>
         <About/>
         <Menu/>
@@ -19,7 +16,6 @@ const Home = () => {
         <Review/>
         <Contact/>
         <Blogs/>
-        <Footer/>
 
     </>
   )

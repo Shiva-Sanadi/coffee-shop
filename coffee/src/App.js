@@ -1,32 +1,33 @@
-import React from 'react'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './Home';
 import Aboutus from "./pages/Aboutus";
-// import Headers from "./pages/Headerss";
-import Menu from './pages/Menuss';
-import Blogs from './pages/Blog2';
+import Menu from './pages/Menu';
+import Blogs from './pages/Blogs';
 import Contact from './pages/ContactUs';
-import Products from './pages/Productsss';
-import Reviews from './pages/Reviewssss';
-import Eror from './pages/Error';
-import { Routes, Route , Path } from 'react-router-dom';
-
+import Products from './pages/Products';
+import Reviews from './pages/Review';
+import Error from './pages/Error';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <>
-    <Routes>
-      <Route exact path='/' Component={Home}></Route>
-      <Route path='/about' Component={Aboutus}></Route>
-      <Route path='/menu' Component={Menu}></Route>
-      <Route path='/products' Component={Products}></Route>
-      <Route path='/reviews' Component={Reviews}></Route>
-      <Route path='/contact' Component={Contact}></Route>
-      <Route path='/blogs' Component={Blogs}></Route>
-      <Route Component={Eror}></Route>
-    </Routes>
-    
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<Aboutus />} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/reviews' element={<Reviews />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
+      <Footer/>
     </>
-  )
+  );
 }
 
 export default App;
