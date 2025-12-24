@@ -1,13 +1,14 @@
+// coffee-shop/coffee/src/App.js
 import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './Home';
+import Home from './pages/Home';
 import Aboutus from "./pages/Aboutus";
 import Menu from './pages/Menu';
 import Blogs from './pages/Blogs';
 import Contact from './pages/ContactUs';
 import Products from './pages/Products';
-import Reviews from './pages/Review';
+import Reviews from './pages/Reviews';
 import Error from './pages/Error';
 import { Routes, Route } from 'react-router-dom';
 

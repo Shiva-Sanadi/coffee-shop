@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import reviewApi from '../api/reviewapi';
 
-const Review = () => {
+const Reviews = () => {
   const [data] = useState(reviewApi);
   
   return (
@@ -31,4 +31,4 @@ const Review = () => {
   );
 }
 
-export default Review;
+export default Reviews;
