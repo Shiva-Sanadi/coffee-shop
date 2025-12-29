@@ -14,21 +14,26 @@ import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<Aboutus />} />
-        <Route path='/menu' element={<Menu />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/reviews' element={<Reviews />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/blogs' element={<Blogs />} />
-        <Route path='*' element={<Error />} />
-      </Routes>
-      <Footer/>
-    </>
+    <div className="bg-coffeeBg dark:bg-gray-900 min-h-screen transition-colors">
+      <Navbar />
+
+      {/* Add padding-top here */}
+      <main className="pt-28 md:pt-36">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<Aboutus />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/reviews' element={<Reviews />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </main>
+
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;

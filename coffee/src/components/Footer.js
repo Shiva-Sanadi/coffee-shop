@@ -1,28 +1,62 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="footer">
-      <div className="share">
-        <a href="https://facebook.com" className="fab fa-facebook" aria-label="Facebook"></a>
-        <a href="https://twitter.com" className="fab fa-twitter" aria-label="Twitter"></a>
-        <a href="https://instagram.com" className="fab fa-instagram" aria-label="Instagram"></a>
-        <a href="https://linkedin.com" className="fab fa-linkedin" aria-label="LinkedIn"></a>
-        <a href="https://pinterest.com" className="fab fa-pinterest" aria-label="Pinterest"></a>
+    <footer className="w-full bg-black text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* Social Icons */}
+        <div className="flex justify-center gap-4 mb-10">
+          {[
+            "facebook-f",
+            "twitter",
+            "instagram",
+            "linkedin-in",
+            "pinterest-p",
+          ].map((icon, i) => (
+            <a
+              key={i}
+              href="#"
+              className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-lg hover:bg-yellow-500 hover:text-black transition-all duration-300 hover:-translate-y-1"
+            >
+              <i className={`fab fa-${icon}`}></i>
+            </a>
+          ))}
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {[
+            { name: "Home", to: "/" },
+            { name: "About", to: "/about" },
+            { name: "Menu", to: "/menu" },
+            { name: "Products", to: "/products" },
+            { name: "Reviews", to: "/reviews" },
+            { name: "Blogs", to: "/blogs" },
+            { name: "Contact", to: "/contact" },
+          ].map((link, i) => (
+            <Link
+              key={i}
+              to={link.to}
+              className="px-6 py-2 text-sm uppercase tracking-wide border border-white/20 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* Divider */}
+        <div className="h-px w-full bg-white/10 mb-6"></div>
+
+        {/* Copyright */}
+        <p className="text-center text-sm text-gray-400">
+          © {new Date().getFullYear()} Crafted with ☕ by{" "}
+          <span className="text-yellow-500 font-semibold">Shiva</span>
+        </p>
       </div>
-      <div className="links">
-        <Link to="/">home</Link>
-        <Link to="/about">about</Link>
-        <Link to="/menu">menu</Link>
-        <Link to="/products">products</Link>
-        <Link to="/reviews">review</Link>
-        <Link to="/contact">contact</Link>
-        <Link to="/blogs">blogs</Link>
-      </div>
-      <div className="credit">created by <span>Shiva</span></div>
-    </section>
+    </footer>
   );
-}
+};
 
 export default Footer;

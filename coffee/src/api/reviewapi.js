@@ -1,25 +1,29 @@
-// import img from "../images/profile.webp";
-// import img2 from "../images/profile2.jpeg";
-// import img3 from "../images/user1.webp";
+import profile1 from "../assets/images/profile.webp";
+import profile2 from "../assets/images/profile2.jpeg";
+import user1 from "../assets/images/user1.webp";
+
 const reviewApi = [
-    {
-        id:1,
-        para:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nostrum maiores totam quaerat iusto voluptates inventore dignissimos ipsum veniam. Repellat laboriosam ad nulla debitis vel aliquam beatae id. Itaque, rerum?",
-        image:"../images/profile.webp",
-        name:"shiva",
-    },
-    {
-        id:2,
-        para:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nostrum maiores totam quaerat iusto voluptates inventore dignissimos ipsum veniam. Repellat laboriosam ad nulla debitis vel aliquam beatae id. Itaque, rerum?",
-        image:"../images/profile2.jpeg",
-        name:"Divya",
-    },
-    {
-        id:3,
-        para:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nostrum maiores totam quaerat iusto voluptates inventore dignissimos ipsum veniam. Repellat laboriosam ad nulla debitis vel aliquam beatae id. Itaque, rerum?",
-        image:"../images/user1.webp",
-        name:"shankar",
-    },
-    
+  {
+    id: 1,
+    para: "Absolutely loved the coffee! The aroma and flavor are unmatched, perfect start to my mornings.",
+    image: profile1,
+    name: "Shiva",
+    rating: 5,
+  },
+  {
+    id: 2,
+    para: "A delightful experience. The chocolate muffins were soft and rich, highly recommend for a snack.",
+    image: profile2,
+    name: "Divya",
+    rating: 4.5,
+  },
+  {
+    id: 3,
+    para: "The Green Tea pack is amazing, so fresh and soothing. Customer service was top-notch!",
+    image: user1,
+    name: "Shankar",
+    rating: 5,
+  },
 ];
+
 export default reviewApi;
